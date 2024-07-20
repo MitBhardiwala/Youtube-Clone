@@ -1,7 +1,8 @@
 
 import "./App.css";
-import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
+// import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import { Box } from "@mui/material";
+import { HashRouter as Router, Route, Switch,useParams } from 'react-router-dom';
 import {Navbar,Feed,VideoDetail,ChannelDetail,SearchFeed} from "./components"
 
 
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <Router>
       
         <Box sx={{backgroundColor:"black"}}>
           <Navbar/>
@@ -21,7 +22,7 @@ function App() {
               <Route path="/search/:searchTerm" exact element={<SearchFeed/>}></Route>
             </Routes>
         </Box>
-      </BrowserRouter>
+      </Router>
     </>
   );
 }
