@@ -3,7 +3,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route, useParams } from "react-router-dom";
 import { Box } from "@mui/material";
 import {Navbar,Feed,VideoDetail,ChannelDetail,SearchFeed} from "./components"
-import { HashRouter } from "react-router-dom";
 
 
 function App() {
@@ -11,7 +10,7 @@ function App() {
 
   return (
     <>
-      <HashRouter>
+      <BrowserRouter>
       
         <Box sx={{backgroundColor:"black"}}>
           <Navbar/>
@@ -22,7 +21,7 @@ function App() {
               <Route path="/search/:searchTerm" exact element={<SearchFeed/>}></Route>
             </Routes>
         </Box>
-      </HashRouter>
+      </BrowserRouter>
     </>
   );
 }
