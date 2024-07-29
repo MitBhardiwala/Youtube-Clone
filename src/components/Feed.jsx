@@ -27,7 +27,7 @@ const Feed = () => {
       >
         <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5 ,color:"white"}}>
-          copyright not mine
+          Copyright &copy; 2024
         </Typography>
       </Box>
       <Box p={2} sx={{overflowY:"auto"}}>
